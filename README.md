@@ -4,6 +4,7 @@ Currency exchange service written in Go.
 
 ## Current status
 
+[![Build Status](https://travis-ci.org/maciaszczykm/currency-exchange.svg?branch=master)](https://travis-ci.org/maciaszczykm/currency-exchange)
 [![Go Report Card](https://goreportcard.com/badge/github.com/maciaszczykm/currency-exchange)](https://goreportcard.com/report/github.com/maciaszczykm/currency-exchange)
 
 ## How to run?
