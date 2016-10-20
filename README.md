@@ -46,4 +46,4 @@ Otherwise, you can just open `http://localhost:8080/convert?amount=200&currency=
 code,
 - build Docker image,
 - deploy application to free server,
-- add CI.
+- move dependencies.
