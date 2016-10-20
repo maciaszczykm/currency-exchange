@@ -13,6 +13,7 @@ type converterResponse struct {
 	Converted convertedMap `json:"converted" xml:"converted"`
 }
 
+// convertedMap contains string and float64 pairs.
 type convertedMap map[string]float64
 
 // MarshalXML marshals convertedMap into XML.

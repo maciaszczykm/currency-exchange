@@ -1,14 +1,14 @@
 # Currency Exchange
-
-Currency exchange service written in Go.
+Currency exchange webservice.
 
 ## Current status
-
 [![Build Status](https://travis-ci.org/maciaszczykm/currency-exchange.svg?branch=master)](https://travis-ci.org/maciaszczykm/currency-exchange)
 [![Go Report Card](https://goreportcard.com/badge/github.com/maciaszczykm/currency-exchange)](https://goreportcard.com/report/github.com/maciaszczykm/currency-exchange)
 
-## How to run?
+## On-line version
+Application is automatically deployed on Heroku, to convert 500 USD go [there](https://currency-exchange-go.herokuapp.com/convert?amount=500&currency=USD).
 
+## Setup
 Make sure, that you have valid `$GOPATH` set.
 
 Clone repository into `$GOPATH/src/github.com/maciaszczykm/`:
@@ -25,8 +25,7 @@ Run application:
 go run main.go
 ```
 
-## How to use?
-
+## Usage
 Asumming application is running on `localhost:8080` to query for a currency exchange rates you can use following
 commands in your terminal:
 
@@ -48,17 +47,17 @@ Returns XML result for 300 PLN.
 Otherwise, you can just open `http://localhost:8080/convert?amount=200&currency=SEK`in your web browser.
 
 
-## How to execute tests?
-
-Open project directory in your terminal and use following command:
+## Testing
+Tests can be executed by opening project directory and running following command:
 
 ``` shell
 go test ./...
 ```
 
 ## Possible enhacements
-
-- add more tests,
-- fix Heroku setup, currently it gives an error R10 after deployment (due to failed web process binding to `$PORT`),
+- enhance validation,
+- add cache with short expiration time due to continous changes of currency rates,
 - change `float64` to more precise type, for example `github.com/shopspring/decimal` can be used easily with current 
-code.
+code,
+- add more tests,
+- describe `go get... ` build process.
