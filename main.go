@@ -12,6 +12,10 @@ import (
 // main runs currency-exchange application. Setting system variable $PORT forces application to run on different port,
 // 8080 is default (needed for Heroku setup).
 func main() {
+
+	fmt.Println(os.Getenv("IP"))
+	fmt.Println(os.Getenv("HOSTNAME"))
+
 	port := os.Getenv("PORT")
 	if port == "" {
 		// Run on localhost:8080 by default.
@@ -22,5 +26,5 @@ func main() {
 
 	log.Printf("Starting currency-exchange application on localhost%s\n", port)
 	restful.Add(converter.ConverterHandler())
-	log.Fatal(http.ListenAndServe("0.0.0.0:8080", nil))
+	log.Fatal(http.ListenAndServe(":8080", nil))
 }
