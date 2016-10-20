@@ -59,5 +59,6 @@ go test ./...
 ## Possible enhacements
 
 - add more tests,
+- fix Heroku setup, currently it gives an error R10 after deployment (due to failed web process binding to `$PORT`),
 - change `float64` to more precise type, for example `github.com/shopspring/decimal` can be used easily with current 
 code.
