@@ -43,6 +43,7 @@ Otherwise, you can just open `http://localhost:8080/convert?amount=200&currency=
 
 ## Possible enhacements
 
+- add more tests,
 - change `float64` to more precise type, for example `github.com/shopspring/decimal` can be used easily with current 
 code,
 - deploy application to free server,
