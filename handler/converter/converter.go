@@ -28,6 +28,8 @@ func ConverterHandler() *restful.WebService {
 // - amount - amount of money to exchange
 // - currency - currency of money to exchange
 func convert(request *restful.Request, response *restful.Response) {
+	log.Printf("Incoming request at %v%v\n", request.Request.Host, request.Request.URL)
+
 	amount, err := strconv.ParseFloat(request.QueryParameter("amount"), 64)
 	if err != nil {
 		log.Println("Cannot read amount parameter from the request")
@@ -43,7 +45,6 @@ func convert(request *restful.Request, response *restful.Response) {
 	}
 
 	rates, err := client.GetCurrencyRates(currency)
-
 	if err != nil {
 		log.Printf("Cannot get currency rates for %.2f %s", amount, currency)
 		handler.HandleError(response, err, http.StatusInternalServerError)
