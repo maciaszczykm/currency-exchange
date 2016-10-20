@@ -1,1 +1,1 @@
-web: currency-exchange
+web: go run main.go
