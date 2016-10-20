@@ -7,8 +7,8 @@ import (
 
 func TestRound(t *testing.T) {
 	cases := []struct {
-		value float64
-		places int
+		value    float64
+		places   int
 		expected float64
 	}{
 		{
