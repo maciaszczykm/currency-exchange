@@ -9,16 +9,23 @@ Currency exchange service written in Go.
 
 ## How to run?
 
+Make sure, that you have valid `$GOPATH` set.
 
-## How to execute tests?
-
-Open project directory in your terminal and use following command:
+Clone repository into `$GOPATH/src/github.com/maciaszczykm/`:
 
 ``` shell
-go test ./...
+mkdir -p $GOPATH/src/github.com/maciaszczykm/
+cd $GOPATH/src/github.com/maciaszczykm/
+git clone https://github.com/maciaszczykm/currency-exchange.git
 ```
 
-## Usage
+Run application:
+
+``` shell
+go run main.go
+```
+
+## How to use?
 
 Asumming application is running on `localhost:8080` to query for a currency exchange rates you can use following
 commands in your terminal:
@@ -41,10 +48,16 @@ Returns XML result for 300 PLN.
 Otherwise, you can just open `http://localhost:8080/convert?amount=200&currency=SEK`in your web browser.
 
 
+## How to execute tests?
+
+Open project directory in your terminal and use following command:
+
+``` shell
+go test ./...
+```
+
 ## Possible enhacements
 
 - add more tests,
 - change `float64` to more precise type, for example `github.com/shopspring/decimal` can be used easily with current 
-code,
-- deploy application to free server,
-- move dependencies.
+code.
