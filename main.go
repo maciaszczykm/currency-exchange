@@ -9,7 +9,8 @@ import (
 	"os"
 )
 
-// main runs currency-exchange application. -PORT can run application on different port, 8080 is default.
+// main runs currency-exchange application. Setting system variable $PORT forces application to run on different port,
+// 8080 is default (needed for Heroku setup).
 func main() {
 	port := os.Getenv("PORT")
 	if port == "" {

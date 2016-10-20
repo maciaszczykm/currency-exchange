@@ -1,1 +1,1 @@
-web: currency-exchange -port=$PORT
+web: currency-exchange
