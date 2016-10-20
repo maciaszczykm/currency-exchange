@@ -22,5 +22,5 @@ func main() {
 
 	log.Printf("Starting currency-exchange application on localhost%s\n", port)
 	restful.Add(converter.ConverterHandler())
-	log.Fatal(http.ListenAndServe(":8080", nil))
+	log.Fatal(http.ListenAndServe("0.0.0.0:8080", nil))
 }
