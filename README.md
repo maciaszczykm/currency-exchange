@@ -11,6 +11,11 @@ Currency exchange service written in Go.
 
 ## How to execute tests?
 
+Open project directory in your terminal and use following command:
+
+``` shell
+go test ./...
+```
 
 ## Usage
 
@@ -40,4 +45,5 @@ Otherwise, you can just open `http://localhost:8080/convert?amount=200&currency=
 - change `float64` to more precise type, for example `github.com/shopspring/decimal` can be used easily with current 
 code,
 - build Docker image,
-- deploy application to free server.
+- deploy application to free server,
+- add CI.

@@ -52,7 +52,6 @@ func convert(request *restful.Request, response *restful.Response) {
 
 	// All the magic happens here
 	for currency, rate := range rates {
-		// TODO consider github.com/shopspring/decimal usage due to float64 inaccuraccy
 		rates[currency] = handler.Round(rate*amount, 2)
 	}
 
